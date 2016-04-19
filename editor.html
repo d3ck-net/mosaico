@@ -34,7 +34,7 @@ $(function() {
   var basePath = window.location.href.substr(0, window.location.href.lastIndexOf('/'));
   var plugins;
   // A basic plugin that expose the "viewModel" object as a global variable.
-  // plugins = [function(vm) {window.viewModel = vm;}];
+  plugins = [function(vm) {window.viewModel = vm;}];
   var ok = Mosaico.init({
     imgProcessorBackend: basePath+'/img/',
     emailProcessorBackend: basePath+'/dl/',
@@ -50,7 +50,7 @@ $(function() {
   }
 });
     </script>
-    
+
     <link rel="stylesheet" href="dist/mosaico-material.min.css?v=0.10" />
     <link rel="stylesheet" href="dist/vendor/notoregular/stylesheet.css" />
     <link rel="stylesheet" href="dist/vendor/evol.colorpicker.min.css" /> <!-- 2k -->
