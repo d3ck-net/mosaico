@@ -64,7 +64,11 @@
     <!-- /ko -->
 
     <!-- ko if: typeof $root.gaExport !== 'undefined' -->
-    <a title="Export to GreenArrowStudio (experimantal)" href="javascript:void(0)" data-bind="attr: { title: $root.t('Export to GreenArrowStudio (experimantal)') }, click: $root.gaExport.execute, clickBubble: false, button: { disabled: !$root.gaExport.enabled(), icons: { primary: 'fa fa-fw fa-share-alt' }, label: $root.t($root.gaExport.name), text: true }">GA-EXPORT</a>
+    <a id="gaExportButton" title="Export to Beyond Studio" href="javascript:void(0)" data-bind="attr: { title: $root.t('Export to Beyond Studio') }, click: $root.gaExport.execute, clickBubble: false, button: { disabled: !$root.gaExport.enabled(), icons: { primary: 'fa fa-fw fa-share-alt' }, label: $root.t($root.gaExport.name), text: true }">EXPORT</a>
+    <!-- /ko -->
+
+    <!-- ko if: typeof $root.showMoxie !== 'undefined' -->
+    <a title="Moxie Manager" href="moxiemanager" data-bind="attr: { title: $root.t('Moxie Manager') }, click: $root.showMoxie, clickBubble: false, button: {  icons: { primary: 'fa fa-fw fa-server' }, label: 'Manage', text: true }">MOXIE</a>
     <!-- /ko -->
 
     <!-- ko if: typeof $root.save !== 'undefined' -->
