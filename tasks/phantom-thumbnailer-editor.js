@@ -160,7 +160,7 @@ if (system.args.length < 5 || system.args.length > 5) {
 	              
 	              process(boundRects, system.args[2]);
 
-            }, 2000);
+            }, 10000);
 
         }
     });
